@@ -14,7 +14,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record){
 	switch(keycode) {
 		case BGN_AR:
 			if (record->event.pressed) {
-				SEND_STRING("\\documentclass{article}"SS_TAP(X_ENT)SS_TAP(X_ENT)"\\begin{document}"SS_TAP(X_ENT)SS_TAP(X_ENT)"\\end{document}");
+				SEND_STRING("\\documentclass{article}"SS_TAP(X_ENT)SS_TAP(X_ENT)"\\begin{document}"SS_TAP(X_ENT)SS_TAP(X_ENT)"\\end{document}"SS_TAP(X_UP));
 			} else {
 				
 			}
