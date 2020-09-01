@@ -46,7 +46,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record){
 			break;
 		case EQU:
 			if (record->event.pressed) {
-				SEND_STRING("\\begin{equation}"SS_TAP(X_ENT)SS_TAP(X_ENT)"\\end{equation}"SS_TAP(X_UP));
+				SEND_STRING("\\begin{equation}"SS_TAP(X_ENT)SS_TAP(X_TAB)"\\begin{split}"SS_TAP(X_ENT)SS_TAP(X_ENT)"\\end{split}"SS_TAP(X_ENT)SS_TAP(X_BSPC)"\\end{equation}"SS_TAP(X_UP)SS_TAP(X_UP)SS_TAP(X_TAB)SS_TAP(X_TAB));
 			} else {
 
 			}
